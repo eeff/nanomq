@@ -11,15 +11,8 @@
 nng_directory(mqtt)
 
 add_subdirectory(mqtt-codec)
-include_directories(mqtt-codec/include)
 
 nng_check_sym(strlcpy string.h NNG_HAVE_STRLCPY)
 nng_check_sym(strnlen string.h NNG_HAVE_STRNLEN)
 nng_check_sym(strcasecmp string.h NNG_HAVE_STRCASECMP)
 nng_check_sym(strncasecmp string.h NNG_HAVE_STRNCASECMP)
-
-nng_sources(
-   mqtt.c     
-   mqtt.h
-)
-
